@@ -59,14 +59,24 @@ module BookingApi
       http_service.request_post('/json/bookings.getHotels', default_parameters.merge(request_parameters))
     end
 
-    # gets hotel facility types
     def hotel_facility_types(request_parameters: {})
       http_service.request_post('/json/bookings.getHotelFacilityTypes', {}.merge(request_parameters))
     end
 
-    # gets hotel facility types
+    def room_facility_types(request_parameters: {})
+      http_service.request_post('/json/bookings.getRoomFacilityTypes', {}.merge(request_parameters))
+    end
+
     def facility_types(request_parameters: {})
       http_service.request_post('/json/bookings.getFacilityTypes', {}.merge(request_parameters))
+    end
+
+    def hotel_policies(request_parameters: {})
+      http_service.request_post('/json/bookings.getPolicies', {}.merge(request_parameters))
+    end
+
+    def hotel_descriptions(request_parameters: {})
+      http_service.request_post('/json/bookings.getHotelDescriptionTranslations', {}.merge(request_parameters))
     end
 
   end
